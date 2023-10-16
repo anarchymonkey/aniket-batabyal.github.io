@@ -1,0 +1,13 @@
+[{
+    "startYear": 2021,
+    "endYear": null,
+    "designation": "SDE-II",
+    "company": "Upstox",
+    "companyURL": "https://upstox.com/",
+    "keyTasks":[
+        "Task-1",
+        "Task-2",
+        "Task-3"
+    ],
+    "stacksUsed": ["React", "Typescript", "SpringBoot", "Javascript"]
+}]
