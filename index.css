@@ -54,6 +54,7 @@ body {
     transition: 0.5s ease-in-out;
     width: 400px;
     height: 40px;
+    cursor: pointer;
 }
 
 #menu-left-navlinks a:hover {
@@ -72,6 +73,7 @@ body {
 .left-pane h3 {
     font-size: 3rem;
     line-height: 1;
+    animation: lights 5s 750ms linear infinite;
 }
 
 .left-pane span {
@@ -139,22 +141,55 @@ body {
     background: linear-gradient(rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234));
 }
 
-.experience-container {
+.experiences {
+    margin: 80px 0px;
+}
+
+.experiences+div {
+    padding: 10px 0px;
+}
+
+.card-container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     gap: 6px;
-    margin: 80px 0px;
     padding: 12px;
+    margin: 20px 0px;
     transition: 0.4s ease-in;
 }
 
-.experience-container:hover {
+.card-container:hover {
     background-color: rgba(30, 41, 59, 0.5);
     border-radius: 25px;
 }
 
-.experience-container:hover h3 {
+.card-container:hover h3 {
+    background: linear-gradient(to right, #30CFD0 20%, #330867 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card-container:hover div + h3 {
+    background: linear-gradient(to right, #30CFD0 20%, #330867 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card-container:hover #subheading {
+    font-weight: 600;
+    opacity: 1;
+    background: linear-gradient(to right, #30CFD0 20%, #330867 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card-container:hover #timeline {
+    font-weight: 600;
+    opacity: 1;
     background: linear-gradient(to right, #30CFD0 20%, #330867 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -214,6 +249,12 @@ body {
             #ee2c82 60%,
             #fb6962 80%,
             #fef84c 100%);
+    opacity: 0.75;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.chip:hover {
     opacity: 0.9;
 }
 
@@ -320,4 +361,82 @@ body {
             left: 80%;
         }
     }
+}
+
+.main-title {
+    font-size: large;
+    margin: 60px 5px;
+}
+
+
+/* City Scape Effect: https://codepen.io/zastrow/pen/PoJmzGJ */
+
+@keyframes lights {
+    0% {
+        color: hsl(230, 40%, 80%);
+        text-shadow:
+            0 0 1em hsla(320, 100%, 50%, 0.2),
+            0 0 0.125em hsla(320, 100%, 60%, 0.3),
+            -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+            1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+
+    30% {
+        color: hsl(230, 80%, 90%);
+        text-shadow:
+            0 0 1em hsla(320, 100%, 50%, 0.5),
+            0 0 0.125em hsla(320, 100%, 60%, 0.5),
+            -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+            0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+
+    40% {
+        color: hsl(230, 100%, 95%);
+        text-shadow:
+            0 0 1em hsla(320, 100%, 50%, 0.5),
+            0 0 0.125em hsla(320, 100%, 90%, 0.5),
+            -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+            0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+    }
+
+    70% {
+        color: hsl(230, 80%, 90%);
+        text-shadow:
+            0 0 1em hsla(320, 100%, 50%, 0.5),
+            0 0 0.125em hsla(320, 100%, 60%, 0.5),
+            0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+            -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+
+    100% {
+        color: hsl(230, 40%, 80%);
+        text-shadow:
+            0 0 1em hsla(320, 100%, 50%, 0.2),
+            0 0 0.125em hsla(320, 100%, 60%, 0.3),
+            1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+            -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+
+}
+
+.spacing-mid {
+    margin: 18px 0px;
+}
+
+.spacing-large {
+    margin: 20px 0px;
+}
+
+.spacing-xlarge {
+    margin: 32px 0px;
+}
+
+.size-mid.size-mid {
+    width: 150px;
+}
+
+.row-flexor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
