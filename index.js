@@ -20,3 +20,14 @@ function scrollToBottom() {
         block: 'end',
       });
 }
+
+// script.js
+// Feel free to add more interactivity if needed
+
+document.addEventListener("DOMContentLoaded", function() {
+    const card = document.querySelector('.card-container');
+
+    card.addEventListener('click', function() {
+        card.classList.toggle('active');
+    });
+});

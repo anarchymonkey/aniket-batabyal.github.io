@@ -440,3 +440,9 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+.card-background {
+    background-color: rgba(30, 41, 59, 0.5);
+    border-radius: 25px;
+    padding: 20px;
+}
